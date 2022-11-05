@@ -10,7 +10,7 @@ hostname = config.settings.database_hostname
 port = config.settings.database_port
 database_name = config.settings.database_name
 
-SQLALCHEMY_DATABASE_URL= f"postgresql://{user_name}:{user_password}@{hostname}/{database_name}"
+SQLALCHEMY_DATABASE_URL= f"postgresql://{user_name}:{user_password}@{hostname}:{port}/{database_name}"
 # SQLALCHEMY_DATABASE_URL= f"postgresql://postgres:@localhost/fastapi"
 # Connect to database
 Engine = create_engine(SQLALCHEMY_DATABASE_URL)
