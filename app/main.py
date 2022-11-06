@@ -16,6 +16,7 @@ origins = ["https://www.google.com.tw",
            "http://localhost:8000",
            ]
 
+# CROC rule (allow access from different domain)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -26,7 +27,7 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "abc"}
+    return {"message": "hello world"}
 
 app.include_router(post.Router)
 app.include_router(user.Router)
